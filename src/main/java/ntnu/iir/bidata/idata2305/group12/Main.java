@@ -1,4 +1,4 @@
-package ntnu.iir.bidata.martinbf;
+package ntnu.iir.bidata.idata2305.group12;
 
 public class Main {
   public static void main(String[] args) {
