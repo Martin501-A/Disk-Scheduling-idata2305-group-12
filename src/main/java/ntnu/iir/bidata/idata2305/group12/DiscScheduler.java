@@ -10,4 +10,6 @@ public interface DiscScheduler {
    * @return the new position.
    */
   public Integer getNewPosition(Integer headPosition, List<Integer> requests);
+
+  public String getName();
 }

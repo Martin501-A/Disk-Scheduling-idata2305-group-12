@@ -34,4 +34,13 @@ public class Disk {
       requestOrder.add(newPosition);
     };
   }
+
+  /**
+   * Print the following:
+   *
+   */
+  public void printOutputs() {
+
+
+  }
 }
