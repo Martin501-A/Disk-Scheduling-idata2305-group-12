@@ -9,12 +9,38 @@ import java.lang.Integer;
 
 public class Main {
   public static void main(String[] args) {
-    Triplet<Boolean, Integer, List<Integer>> triplet = case1();
-    DiskScheduler scheduler = new SSTFScheduler();
-    Disk disk = new Disk(triplet.getValue1(), triplet.getValue0(), scheduler);
-    disk.addRequests(triplet.getValue2());
+    System.out.println("=== Testing Disk Scheduling Algorithms ===\n");
+
+    // Run simulation for all three cases from the assignment
+    runSimulation("Case 1", case1());
+    runSimulation("Case 2", case2());
+    runSimulation("Case 3", case3());
+  }
+
+  public static void runSimulation(String caseName, Triplet<Boolean, Integer, List<Integer>> triplet) {
+    System.out.println("--- " + caseName + " ---");
+
+    // Extract initial data
+    Boolean initialDirection = triplet.getValue0();
+    Integer initialHeadPosition = triplet.getValue1();
+    List<Integer> requests = triplet.getValue2();
+
+    // 1. To test FCFS:
+//     DiskScheduler scheduler = new FCFSScheduler();
+
+    // 2. To test SSTF:
+    // DiskScheduler scheduler = new SSTFScheduler();
+
+    // 3. To test SCAN:
+    DiskScheduler scheduler = new SCANScheduler(initialDirection);
+
+
+    // Initialize the disk and start processing
+    Disk disk = new Disk(initialHeadPosition, initialDirection, scheduler);
+    disk.addRequests(requests);
     disk.start();
     disk.printOutputs();
+    System.out.println();
   }
 
   public static Triplet<Boolean, Integer, List<Integer>> case1() {
