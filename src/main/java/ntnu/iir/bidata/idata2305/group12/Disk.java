@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Disk {
-  private DiscScheduler scheduler;
+  private DiskScheduler scheduler;
   private List<Integer> requests;
   private List<Integer> requestOrder;
   private Integer travelDistance;
   private Integer headPosition;
   private Boolean direction; // Right is true, left is false.
 
-  public Disk(Integer headPosition, Boolean direction, DiscScheduler scheduler) {
+  public Disk(Integer headPosition, Boolean direction, DiskScheduler scheduler) {
     this.scheduler = scheduler;
     this.direction = direction;
     this.headPosition = headPosition;
