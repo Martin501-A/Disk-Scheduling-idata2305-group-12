@@ -34,4 +34,25 @@ public class Disk {
       requestOrder.add(newPosition);
     };
   }
+
+  /**
+   * Print the following:
+   * algorithm name.
+   * Service Order.
+   * Total Head movement.
+   */
+  public void printOutputs() {
+    System.out.println(
+            "Algorithm name: " + scheduler.getName() + "\n"
+            + "Service Order \n"
+    );
+    for (int i = 0; i < requestOrder.size(); i++) {
+    if (i == requestOrder.size() - 1) {
+      System.out.print(requestOrder.get(i) + "\n");
+    } else {
+      System.out.print(requestOrder.get(i) + " -> ");
+    }
+    }
+    System.out.println("Distance: " + travelDistance);
+  }
 }
