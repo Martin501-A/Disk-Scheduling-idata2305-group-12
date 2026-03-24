@@ -6,7 +6,7 @@ import java.util.List;
  * Represents a scheduler that gives the new position based the
  * address with the shortest seek time.
  */
-public class SSTFScheduler implements DiscScheduler{
+public class SSTFScheduler implements DiskScheduler {
 
   public SSTFScheduler() {
 
