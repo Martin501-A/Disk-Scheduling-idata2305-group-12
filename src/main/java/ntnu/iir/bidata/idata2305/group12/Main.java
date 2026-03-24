@@ -10,6 +10,11 @@ import java.lang.Integer;
 public class Main {
   public static void main(String[] args) {
     Triplet<Boolean, Integer, List<Integer>> triplet = case1();
+    DiskScheduler scheduler = new SSTFScheduler();
+    Disk disk = new Disk(triplet.getValue1(), triplet.getValue0(), scheduler);
+    disk.addRequests(triplet.getValue2());
+    disk.start();
+    disk.printOutputs();
   }
 
   public static Triplet<Boolean, Integer, List<Integer>> case1() {
