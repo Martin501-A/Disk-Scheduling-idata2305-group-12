@@ -32,4 +32,9 @@ public class SSTFScheduler implements DiscScheduler{
     }
     return nearestPostion;
   }
+
+  @Override
+  public String getName() {
+    return "SSTFScheduler";
+  }
 }
