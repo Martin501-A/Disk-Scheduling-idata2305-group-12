@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Scheduler that gives the new position based on the first request in the list.
  */
-public class FCFSScheduler implements DiscScheduler {
+public class FCFSScheduler implements DiskScheduler {
 
   /**
    * Calculates the new position based on scheduler type.

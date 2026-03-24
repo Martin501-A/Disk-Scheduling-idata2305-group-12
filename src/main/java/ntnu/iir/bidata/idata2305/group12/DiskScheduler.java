@@ -2,7 +2,7 @@ package ntnu.iir.bidata.idata2305.group12;
 
 import java.util.List;
 
-public interface DiscScheduler {
+public interface DiskScheduler {
 
   /**
    * Calculates the new position based on scheduler type.
