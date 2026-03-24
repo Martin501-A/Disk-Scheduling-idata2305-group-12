@@ -30,6 +30,7 @@ public class SSTFScheduler implements DiscScheduler{
         distance = Math.abs(headPosition - i);
       }
     }
+    requests.remove(nearestPostion);
     return nearestPostion;
   }
 
